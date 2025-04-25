@@ -1,0 +1,9 @@
+todo:
+- pronoun icon
+- location icon
+- bday icon
+- message icon
+- tap! icon
+- work icon
+- case studies icon
+- updates icon
