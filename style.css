@@ -13,7 +13,8 @@
 }
 
 :root {
-    --primary: rgba(45, 159, 241, 1);
+    /* --primary: rgba(45, 159, 241, 1); */
+    --primary: red;
     --secondary: grey;
 
 
