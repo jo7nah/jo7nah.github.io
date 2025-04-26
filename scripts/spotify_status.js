@@ -88,4 +88,4 @@ function onRecentSuccess(response) {
 
 run();
 
-setInterval(run, 60000);
+setInterval(run, 30000);
