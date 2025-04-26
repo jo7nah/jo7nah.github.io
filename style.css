@@ -14,12 +14,13 @@
 
 :root {
     --primary: rgba(45, 159, 241, 1);
-    --secondary: grey;
+    --secondary: rgb(112, 77, 239);
+    --text-color: white;
 
 
 
     font-family: 'Inter', Helvetica, Arial, sans-serif;
-    color: white;
+    color: var(--text-color);
 }
 
 a {
@@ -118,6 +119,37 @@ main {
 .tags {
     font-size: .75rem;
     font-weight: 400;
+}
+
+#spotify-line {
+    display: flex;
+    gap: .3em;
+    align-items: center;
+}
+
+#spotify-album-cover {
+    height: 1.55em;
+    border-radius: 20%;
+}
+
+#spotify-text {
+    background: linear-gradient(to right, var(--text-color) 30%, var(--secondary) 50%, var(--text-color) 70%);
+    background-size: 400% auto;
+    color: var(--text-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animatedTextGradient 10s linear infinite;
+}
+
+@keyframes animatedTextGradient {
+    to {
+        background-position: 100% center;
+    }
+}
+
+#spotify-text-by {
+    background: var(--text-color);
+    background-clip: text;
 }
 
 #account-stats {
