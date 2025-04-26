@@ -83,7 +83,6 @@ function onRecentSuccess(response) {
     document.getElementById("spotify-album-cover").src = JSON.parse(response)['items'][0]['track']['album']['images'][0]['url'];
     document.getElementById("spotify-status").innerHTML = "Last played: ";
     document.getElementById("spotify-text").innerHTML = '<a href="' + JSON.parse(response)['items'][0]['track']['external_urls']['spotify'] + '">' + JSON.parse(response)['items'][0]['track']['name'] + '</a><span id="spotify-text-by"> by </span><a href="' + JSON.parse(response)['items'][0]['track']['artists'][0]['external_urls']['spotify'] + '">' + JSON.parse(response)['items'][0]['track']['artists'][0]['name'] + '</a>';
-    // document.getElementById("spotify-text").innerHTML = JSON.parse(response)['items'][0]['track']['name'] + ' <span style="color: var(--text-color)">by</span> ' + JSON.parse(response)['items'][0]['track']['artists'][0]['name'];
 }
 
 run();
