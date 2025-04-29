@@ -119,6 +119,13 @@ main {
 .tags {
     font-size: .75rem;
     font-weight: 400;
+    display: flex;
+    gap: .3em;
+    align-items: center;
+}
+
+.tags-icons {
+    height: .9em;
 }
 
 #spotify-line {
@@ -133,7 +140,7 @@ main {
 }
 
 #spotify-text {
-    background: linear-gradient(to right, var(--text-color) 30%, var(--secondary) 50%, var(--text-color) 70%);
+    background: linear-gradient(to right, var(--text-color) 30%, #1ED760 50%, var(--text-color) 70%);
     background-size: 400% auto;
     color: var(--text-color);
     background-clip: text;
