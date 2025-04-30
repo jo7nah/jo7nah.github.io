@@ -140,7 +140,7 @@ main {
 }
 
 #spotify-text {
-    background: linear-gradient(to right, var(--text-color) 30%, #1ED760 50%, var(--text-color) 70%);
+    background: linear-gradient(to right, var(--text-color) 35%, #7743d8 47%, #9a43d8 50%, #7743d8 53%, var(--text-color) 65%);
     background-size: 400% auto;
     color: var(--text-color);
     background-clip: text;
