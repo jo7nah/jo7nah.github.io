@@ -256,9 +256,17 @@ main {
     background-color: var(--primary);
 }
 
+#cta-primary:active {
+    background-color: var(--primary);
+}
+
 #tap-button {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: #5f5f5f;
     cursor: pointer;
+}
+
+#tap-button:active {
+    background-color: #515151;
 }
 
 #feed {
