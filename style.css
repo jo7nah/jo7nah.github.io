@@ -14,9 +14,9 @@
 
 :root {
     --primary: rgba(45, 159, 241, 1);
-    --secondary: rgb(112, 77, 239);
+    --secondary: red;
     --text-color: white;
-    --spotify-color: green;
+    --spotify-color: #1db954;
 
 
 
@@ -278,4 +278,5 @@ footer {
     /* border: 2px solid green */
     margin-top: 2.25rem;
     font-weight: 300;
+    font-size: .5rem;
 }
