@@ -16,6 +16,7 @@
     --primary: rgba(45, 159, 241, 1);
     --secondary: rgb(112, 77, 239);
     --text-color: white;
+    --spotify-color: green;
 
 
 
@@ -140,7 +141,7 @@ main {
 }
 
 #spotify-text {
-    background: linear-gradient(to right, var(--text-color) 35%, #7743d8 47%, #9a43d8 50%, #7743d8 53%, var(--text-color) 65%);
+    background: linear-gradient(to right, var(--text-color) 30%, var(--spotify-color) 50%, var(--text-color) 70%);
     background-size: 400% auto;
     color: var(--text-color);
     background-clip: text;

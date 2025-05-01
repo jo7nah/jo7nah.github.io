@@ -62,9 +62,17 @@
                     </div>
 
                     <div id="spotify-line">
-                        <img src="" alt="" id="spotify-album-cover">
+                        <img src="" alt="" id="spotify-album-cover" crossorigin="anonymous">
                         <p id="spotify-status">Fetching...</p>
                         <p id="spotify-text"></p>
+                        <div id="spotify-visualizer">
+                            <div class="visualizer-bars"></div>
+                            <div class="visualizer-bars"></div>
+                            <div class="visualizer-bars"></div>
+                            <div class="visualizer-bars"></div>
+                            <div class="visualizer-bars"></div>
+                            <div class="visualizer-bars"></div>
+                        </div>
                     </div>
 
                     <div id="account-stats">
@@ -112,6 +120,8 @@
         </footer>
     </div>
     
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/node-vibrant/3.2.1-alpha.1/vibrant.min.js" integrity="sha512-bS7wFvt3aOGBaGxuYLmsUk2Uos0gGB36+xkohsb97jXQDXWZT5qesdpxApmzqOIgMgag6rCJ/Iu7dcxPuh1r4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="scripts/spotify_status.js" type="module"></script>
     <script src="scripts/doc_title.js"></script>
 </body>
