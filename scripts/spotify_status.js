@@ -23,22 +23,24 @@ function getCurrentlyPlaying() {
 
 function onSuccess(response) {
     albumCover.src = JSON.parse(response)['image'];
-    if(JSON.parse(response)['currentlyPlaying'] == true) {
-        console.log("jonah is currently playing music");
-        document.getElementById("spotify-status").innerHTML = "Now jamming: ";
-        document.getElementById("spotify-text").innerHTML = '<a href="' + JSON.parse(response)['href'] + '">' + JSON.parse(response)['track'] + '</a><span id="spotify-text-by"> by </span><a href="' + JSON.parse(response)['artists_href'] + '">' + JSON.parse(response)['artists'] + '</a>';
 
-        const vibrant = new Vibrant(albumCover);
+    const vibrant = new Vibrant(albumCover);
         vibrant.getPalette().then(palette => {
             const color = palette.Vibrant.hex;
             cssRoot.style.setProperty('--spotify-color', color);
             console.log('album color is: ' + color);
-            
-        });
+        }
+    );
+
+    if(JSON.parse(response)['currentlyPlaying'] == true) {
+        console.log("jonah is currently playing music");
+        document.getElementById("spotify-status").innerHTML = "Live listening: ";
+        document.getElementById("spotify-text").innerHTML = '<a href="' + JSON.parse(response)['href'] + '">' + JSON.parse(response)['track'] + '</a><span id="spotify-text-by"> by </span><a href="' + JSON.parse(response)['artists_href'] + '">' + JSON.parse(response)['artists'] + '</a>';
     } else {
         console.log("jonah is not playing any music right now");
-        document.getElementById("spotify-status").innerHTML = "Recently played: ";
+        document.getElementById("spotify-status").innerHTML = "Last played: ";
         document.getElementById("spotify-text").innerHTML = '<a href="' + JSON.parse(response)['href'] + '">' + JSON.parse(response)['track'] + '</a><span id="spotify-text-by"> by </span><a href="' + JSON.parse(response)['artists_href'] + '">' + JSON.parse(response)['artists'] + '</a>';
+        document.getElementById("spotify-visualizer").style.animation = "none";
     }
 }
 
