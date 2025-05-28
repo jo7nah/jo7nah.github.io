@@ -74,12 +74,13 @@ main {
 #profile_account-stats {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    /* gap: 1.5rem; */
 }
 
 #profile {
     display: flex;
     gap: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 #profile-picture {
@@ -133,6 +134,8 @@ main {
     display: flex;
     gap: .5em;
     align-items: center;
+    font-size: .75rem;
+    margin-bottom: 2rem;
 }
 
 #spotify-album-cover {
@@ -219,12 +222,13 @@ main {
 #account-stats {
     display: flex;
     padding: 0 .75rem;
-    justify-content: space-between;
 }
 
 .stats {
     display: flex;
+    justify-content: center;
     gap: .3em;
+    width: 100%;
 }
 
 .stat-counts {
@@ -246,7 +250,7 @@ main {
     /* border: 1px solid red; */
     font-size: 1rem;
     font-weight: 400;
-    width: 100%;
+    /* width: 100%; */
     padding: .5rem 2rem;
     text-align: center;
     border-radius: 10px;
@@ -254,6 +258,7 @@ main {
 
 #cta-primary {
     background-color: var(--primary);
+    width: 67%;
 }
 
 #cta-primary:active {
@@ -263,6 +268,7 @@ main {
 #tap-button {
     background-color: #5f5f5f;
     cursor: pointer;
+    width: 33%;
 }
 
 #tap-button:active {
@@ -270,17 +276,57 @@ main {
 }
 
 #feed {
-    margin-top: 2.5rem;
+    margin-top: 3.5rem;
 }
 
 #feed-nav {
     display: flex;
-    list-style: none;
+    position: relative;
 }
 
-#feed-nav > li {
+#feed-nav > label {
     width: 100%;
     text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#feed-nav input[type=radio] {
+    display: none;
+}
+
+#feed-nav input[type=radio]:checked + label {
+    color: var(--text-color);
+}
+
+input[id=work-radio]:checked ~ #nav-slider {
+    transform: translateX(0);
+}
+
+input[id=case-radio]:checked ~ #nav-slider {
+    transform: translateX(100%);
+}
+
+input[id=updates-radio]:checked ~ #nav-slider {
+    transform: translateX(200%);
+}
+
+#nav-slider-track {
+    position: absolute;
+    top: 1.5em;
+    display: flex;
+    height: .1em;
+    width: 100%;
+    background-color:  rgba(255, 255, 255, 0.15);
+}
+
+#nav-slider {
+    position: absolute;
+    top: 1.5em;
+    display: flex;
+    height: .1em;
+    width: 33.33%;
+    background-color:  var(--primary);
+    transition: all .24s ease;
 }
 
 footer {
