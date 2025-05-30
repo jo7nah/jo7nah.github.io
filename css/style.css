@@ -25,21 +25,33 @@
 }
 
 :root {
+    /* COLORS */
     --primary: #6f9af8;
     --secondary: rgba(45, 159, 241, 1);
     --text-color: black;
-    --spotify-color: #1db954;
     --background-color: #e3e3e3;
+
+    /* SPACING */
+    --spacing-xxs: .25rem;
+    --spacing-xs: .5rem;
+    --spacing-s: .75rem;
+    --spacing-m: 1.25rem;
+    --spacing-l: 2rem;
+    --spacing-xl: 3.25rem;
+    --spacing-xxl: 5.25rem;
 
 
     font-family: 'NeueBit', Helvetica, Arial, sans-serif;
-    /* font-family: 'Inter', Helvetica, Arial, sans-serif; */
     color: var(--text-color);
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+h1 {
+    margin: 0;
 }
 
 body {
@@ -74,61 +86,61 @@ header {
 
 main {
     /* border: 2px solid yellow; */
-    margin-top: 2.5rem;
+    margin-top: var(--spacing-m);
 }
 
 #profile-section {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: var(--spacing-l);
     padding: 0 1.5rem;
 }
 
 #profile_account-stats {
     display: flex;
     flex-direction: column;
-    /* gap: 1.5rem; */
+    gap: var(--spacing-l);
 }
 
 #profile {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    gap: var(--spacing-s);
 }
 
 #profile-picture {
-    height: 100px;
-    border-radius: 20%;
+    height: 75px;
+    border-radius: 10%;
 }
 
 #profile-details {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: .75rem;
+    gap: var(--spacing-s);
 }
 
 #name_bio {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    /* gap: .5rem; */
 }
 
 #display-name {
     font-size: 2rem;
     font-weight: 500;
+    line-height: .83;
 }
 
 #biography {
     font-family: 'Mondwest', 'Times New Roman', Times, serif;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.3em;
     font-weight: 400;
 }
 
 #tag-line {
     display: flex;
-    gap: 1rem;
+    gap: var(--spacing-s);
     opacity: .5;
 }
 
@@ -141,20 +153,23 @@ main {
 }
 
 .tags-icons {
-    height: .9em;
+    height: .8em;
 }
 
 #spotify-line {
     display: flex;
-    gap: .5em;
+    gap: var(--spacing-xxs);
     align-items: center;
     font-size: .75rem;
-    margin-bottom: 2rem;
+}
+
+#spotify-status {
+    opacity: .5;
 }
 
 #spotify-album-cover {
-    height: 1.55em;
-    border-radius: 20%;
+    height: 1.25em;
+    border-radius: 10%;
 }
 
 #spotify-text {
@@ -235,7 +250,6 @@ main {
 
 #account-stats {
     display: flex;
-    padding: 0 .75rem;
     justify-content: space-evenly;
 }
 
@@ -249,7 +263,8 @@ main {
 }
 
 .stat-counts {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    line-height: .5;
     font-weight: 600;
 }
 
@@ -264,10 +279,11 @@ main {
 }
 
 .profile-buttons {
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 400;
     padding: .5rem 2rem;
     text-align: center;
+    line-height: .83;
 }
 
 #cta-primary {

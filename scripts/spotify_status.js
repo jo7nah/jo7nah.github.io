@@ -42,6 +42,7 @@ function onSuccess(response) {
         document.getElementById("spotify-status").innerHTML = "Last played: ";
         document.getElementById("spotify-text").innerHTML = '<a href="' + JSON.parse(response)['href'] + '">' + JSON.parse(response)['track'] + '</a><span id="spotify-text-by"> by </span><a href="' + JSON.parse(response)['artists_href'] + '">' + JSON.parse(response)['artists'] + '</a>';
         document.getElementById("spotify-visualizer").style.display = "none";
+        document.getElementById("spotify-text").style.opacity = ".5";
     }
 }
 
