@@ -178,7 +178,7 @@ main {
 }
 
 #spotify-visualizer {
-    display: flex;
+    display: none;
     gap: .15em;
     align-items: center;
 }
@@ -278,6 +278,24 @@ main {
     border: 1px solid #052D7D;
     box-shadow: 3px 3px 0px 0px #87BFFF inset, -3px -3px 0px 0px #5B7AE0 inset, 0px 6px 0px 0px #37468F;
     cursor: pointer;
+    animation: primary-wiggle 5s linear infinite;
+    overflow: hidden;
+}
+
+#cta-primary::before {
+    content: "";
+    background-color: rgba(193, 216, 255, 0.3);
+    height: 180%;
+    width: 20px;
+    position: absolute;
+    top: -30%;
+    left: -15%;
+    transform: rotate(30deg);
+}
+
+#cta-primary:hover::before {
+    left: 115%;
+    transition: 1s ease;
 }
 
 #cta-primary:active {
@@ -286,6 +304,30 @@ main {
     border: 1px solid #04266A;
     background-color: #5E83D3;
     box-shadow: 3px 3px 0px 0px #73A2D9 inset, -3px -3px 0px 0px #4D68BE inset;
+}
+
+@keyframes primary-wiggle {
+    0% {
+        transform: translateY(0px);
+    }
+    2% {
+        transform: translateY(-3px);
+    }
+    4% {
+        transform: translateY(0px);
+    }
+    6% {
+        transform: translateY(0px);
+    }
+    8% {
+        transform: translateY(-3px);
+    }
+    10% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 #tap-button {
