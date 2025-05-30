@@ -9,18 +9,31 @@
 @font-face {
     font-family: 'Inter';
     font-style: normal;
-    src: url(fonts/Inter-VariableFont_opsz\,wght.ttf) format('tff');
+    src: url(fonts/Inter-VariableFont_opsz\,wght.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'NeueBit';
+    src: url(fonts/PPNeueBit-Bold.otf) format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Mondwest';
+    src: url(fonts/PPMondwest-Regular.otf) format('opentype');
+    font-weight: normal;
 }
 
 :root {
-    --primary: rgba(45, 159, 241, 1);
-    --secondary: red;
-    --text-color: white;
+    --primary: #6f9af8;
+    --secondary: rgba(45, 159, 241, 1);
+    --text-color: black;
     --spotify-color: #1db954;
+    --background-color: #e3e3e3;
 
 
-
-    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-family: 'NeueBit', Helvetica, Arial, sans-serif;
+    /* font-family: 'Inter', Helvetica, Arial, sans-serif; */
     color: var(--text-color);
 }
 
@@ -38,7 +51,7 @@ body {
     /* border: 2px solid blue; */
     max-width: 1024px;
     margin: 0 auto;
-    background-color: rgb(42, 42, 42);
+    background-color: var(--background-color);
 }
 
 header {
@@ -50,18 +63,18 @@ header {
 }
 
 #account-name {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 500;
 }
 
 #cta-secondary {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--primary);
 }
 
 main {
     /* border: 2px solid yellow; */
-    margin-top: 2.25rem;
+    margin-top: 2.5rem;
 }
 
 #profile-section {
@@ -102,11 +115,12 @@ main {
 }
 
 #display-name {
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: 500;
 }
 
 #biography {
+    font-family: 'Mondwest', 'Times New Roman', Times, serif;
     font-size: 1rem;
     line-height: 1.3em;
     font-weight: 400;
@@ -222,17 +236,20 @@ main {
 #account-stats {
     display: flex;
     padding: 0 .75rem;
+    justify-content: space-evenly;
 }
 
 .stats {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: .3em;
-    width: 100%;
+    align-items: center;
+    /* gap: .3em; */
+    /* width: 100%; */
 }
 
 .stat-counts {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -247,32 +264,46 @@ main {
 }
 
 .profile-buttons {
-    /* border: 1px solid red; */
-    font-size: 1rem;
+    font-size: 2.25rem;
     font-weight: 400;
-    /* width: 100%; */
     padding: .5rem 2rem;
     text-align: center;
-    border-radius: 10px;
 }
 
 #cta-primary {
+    position: relative;
+    color: #052D7D;
     background-color: var(--primary);
     width: 67%;
+    border: 1px solid #052D7D;
+    box-shadow: 3px 3px 0px 0px #87BFFF inset, -3px -3px 0px 0px #5B7AE0 inset, 0px 6px 0px 0px #37468F;
+    cursor: pointer;
 }
 
 #cta-primary:active {
-    background-color: var(--primary);
+    top: 6px;
+    color: #04266A;
+    border: 1px solid #04266A;
+    background-color: #5E83D3;
+    box-shadow: 3px 3px 0px 0px #73A2D9 inset, -3px -3px 0px 0px #4D68BE inset;
 }
 
 #tap-button {
-    background-color: #5f5f5f;
+    color: #454545;
+    background-color: #B3B3B3;
     cursor: pointer;
     width: 33%;
+    border: 1px solid #454545;
+    box-shadow: 3px 3px 0px 0px #C3C3C3 inset, -3px -3px 0px 0px #9D9D9D inset, 0px 6px 0px 0px #636363;
+    position: relative;
 }
 
 #tap-button:active {
-    background-color: #515151;
+    top: 6px;
+    color: #3B3B3B;
+    border: 1px solid #3B3B3B;
+    background-color: #989898;
+    box-shadow: 3px 3px 0px 0px #A6A6A6 inset, -3px -3px 0px 0px #858585 inset;
 }
 
 #feed {

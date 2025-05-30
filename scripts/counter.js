@@ -37,9 +37,9 @@ function increaseCounter() {
 
 function onSuccess(response) {
     if(JSON.parse(response)['value'] < 1000) {
-        document.getElementById('tap-count').innerHTML = JSON.parse(response)['value'];
+        document.getElementById('tap-button').innerHTML = JSON.parse(response)['value'];
     } else if (1000 <= JSON.parse(response)['value'] < 1000000) {
-        document.getElementById('tap-count').innerHTML = Math.floor(JSON.parse(response)['value'] / 1000) + '.' + Math.floor((JSON.parse(response)['value'] % 1000) / 100) + "K";
+        document.getElementById('tap-button').innerHTML = Math.floor(JSON.parse(response)['value'] / 1000) + '.' + Math.floor((JSON.parse(response)['value'] % 1000) / 100) + "K";
     }
 }
 
