@@ -26,10 +26,16 @@
 
 :root {
     /* COLORS */
-    --primary: #6f9af8;
-    --secondary: rgba(45, 159, 241, 1);
-    --text-color: black;
-    --background-color: #e3e3e3;
+    --primary: var(--blue-on-white);
+
+    --text-color: var(--faux-black);
+    --background-color: var(--off-white);
+
+    --blue-on-white: #1468C8;
+    --blue-on-black: #2E84E6;
+
+    --faux-black: #1b1b1b;
+    --off-white: #eaeaea;
 
     /* SPACING */
     --spacing-xxs: .25rem;
@@ -109,7 +115,9 @@ main {
 
 #profile-picture {
     height: 75px;
-    border-radius: 10%;
+    /* border-radius: 10%; */
+    image-rendering: pixelated;
+    aspect-ratio: 1;
 }
 
 #profile-details {
@@ -145,7 +153,7 @@ main {
 }
 
 .tags {
-    font-size: .75rem;
+    font-size: 1rem;
     font-weight: 400;
     display: flex;
     gap: .3em;
@@ -160,7 +168,7 @@ main {
     display: flex;
     gap: var(--spacing-xxs);
     align-items: center;
-    font-size: .75rem;
+    font-size: 1rem;
 }
 
 #spotify-status {
@@ -422,5 +430,5 @@ footer {
     /* border: 2px solid green */
     margin-top: 2.25rem;
     font-weight: 300;
-    font-size: .5rem;
+    font-size: .75rem;
 }
