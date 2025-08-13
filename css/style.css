@@ -83,6 +83,9 @@ header {
 #account-name {
     font-size: 2.5rem;
     font-weight: 500;
+    display: flex;
+    gap: .25em;
+    align-items: center;
 }
 
 #cta-secondary {
@@ -202,14 +205,15 @@ main {
 
 #spotify-visualizer {
     display: none;
-    gap: .15em;
-    align-items: center;
+    gap: .1em;
+    align-items: end;
 }
 
 .visualizer-bars {
     background-color: var(--spotify-color);
     height: .2em;
-    width: .15em;
+    width: .25em;
+    font-size: .5em;
     /* border-radius: 999px; */
     animation: visualize 2.4s infinite ease;
 }
