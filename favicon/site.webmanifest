@@ -1,6 +1,6 @@
 {
-  "name": "jonah alisic",
-  "short_name": "design",
+  "name": "Jonah Alisic",
+  "short_name": "Jonah",
   "icons": [
     {
       "src": "/favicon/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#171717",
+  "background_color": "#171717",
   "display": "standalone"
 }
