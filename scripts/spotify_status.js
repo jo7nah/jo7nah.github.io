@@ -28,7 +28,7 @@ function onSuccess(response) {
         vibrant.getPalette().then(palette => {
             const color = palette.Vibrant.hex;
             cssRoot.style.setProperty('--spotify-color', color);
-            console.log('album color is: ' + color);
+            // console.log('album color is: ' + color);
         }
     );
 

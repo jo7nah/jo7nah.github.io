@@ -1,7 +1,9 @@
 const titles = [
     "‧₊˚ ⋅* ‧₊ j o n a h‧₊˚ ⋅* ‧₊",
     "*ੈ✩‧₊˚༺ jonah ༻*ੈ✩‧₊˚",
-    "⛧°. ⋆༺JONAH༻⋆. °⛧"
+    "⛧°. ⋆༺JONAH༻⋆. °⛧",
+    "JONAH ALISIC",
+    "jonah"
 ]
 
 function changeTitle(){
@@ -9,4 +11,4 @@ function changeTitle(){
     document.title = title;
 }
 
-setInterval(changeTitle, 2000);
+setInterval(changeTitle, 1000);

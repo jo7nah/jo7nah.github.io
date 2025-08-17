@@ -1,6 +1,7 @@
 todo:
-- message icon
 - tap! icon
 - work icon
 - case studies icon
 - updates icon
+- redo icons in tags line
+- settings/.. icon
