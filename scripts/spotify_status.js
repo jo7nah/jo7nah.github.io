@@ -33,12 +33,13 @@ function onSuccess(response) {
     );
 
     if(JSON.parse(response)['currentlyPlaying'] == true) {
-        console.log("jonah is currently playing music");
+        // console.log("jonah is currently playing music");
+        document.getElementById("headphones-icon").style.display = "block";
         document.getElementById("spotify-status").innerHTML = "Live listening: ";
         document.getElementById("spotify-text").innerHTML = '<a href="' + JSON.parse(response)['href'] + '">' + JSON.parse(response)['track'] + '</a><span id="spotify-text-by"> by </span><a href="' + JSON.parse(response)['artists_href'] + '">' + JSON.parse(response)['artists'] + '</a>';
         document.getElementById("spotify-visualizer").style.display = "flex";
     } else {
-        console.log("jonah is not playing any music right now");
+        // console.log("jonah is not playing any music right now");
         document.getElementById("spotify-status").innerHTML = "Last played: ";
         document.getElementById("spotify-text").innerHTML = '<a href="' + JSON.parse(response)['href'] + '">' + JSON.parse(response)['track'] + '</a><span id="spotify-text-by"> by </span><a href="' + JSON.parse(response)['artists_href'] + '">' + JSON.parse(response)['artists'] + '</a>';
         document.getElementById("spotify-visualizer").style.display = "none";
