@@ -34,8 +34,8 @@
     --blue-on-white: #1468C8;
     --blue-on-black: #2E84E6;
 
-    --red-on-white: #D63D3D;
-    --red-on-black: #D5212C;
+    --red-on-white: 214, 61, 61;
+    --red-on-black: 213, 33, 44;
 
     --faux-black: 23, 23, 23;
     --off-white: 228, 228, 231;
@@ -72,6 +72,7 @@ h1 {
 body {
     background-color: rgb(78, 78, 78);
     margin: 0;
+    height: 200vh;
 }
 
 .wrapper {
@@ -85,8 +86,11 @@ header {
     /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: .75rem 1.5rem;
+    position: sticky;
+    top: 0;
+    background-color: rgb(var(--background-color));
+    z-index: 100;
 }
 
 #account-name {
@@ -97,9 +101,21 @@ header {
     align-items: center;
 }
 
-#cta-secondary {
+#header-secondary {
     font-size: 1.5rem;
-    color: var(--primary);
+    display: flex;
+    align-items: center;
+    color: rgb(var(--primary));
+    cursor: pointer;
+    padding: 0 .25em;
+}
+
+#settings-icon {
+    height: 1em;
+}
+
+#cta-secondary {
+    display: none;
 }
 
 main {
@@ -317,9 +333,9 @@ main {
 #cta-primary {
     position: relative;
     color: rgb(var(--text-color));
-    background-color: var(--primary);
+    background-color: rgb(var(--primary));
     width: 67%;
-    box-shadow: 3px 3px 0px 0px var(--lighting-s) inset, -3px -3px 0px 0px var(--shading-s) inset, 0px 6px 0px 0px var(--shading-m), 0px 6px 0px 0px var(--primary);
+    box-shadow: 3px 3px 0px 0px var(--lighting-s) inset, -3px -3px 0px 0px var(--shading-s) inset, 0px 6px 0px 0px var(--shading-m), 0px 6px 0px 0px rgb(var(--primary));
     cursor: pointer;
     animation: primary-wiggle 5s linear infinite;
     overflow: hidden;
@@ -330,7 +346,7 @@ main {
 
 #cta-primary:hover {
     top: -3px;
-    box-shadow: 3px 3px 0px 0px var(--lighting-s) inset, -3px -3px 0px 0px var(--shading-s) inset, 0px 9px 0px 0px var(--shading-m), 0px 9px 0px 0px var(--primary);
+    box-shadow: 3px 3px 0px 0px var(--lighting-s) inset, -3px -3px 0px 0px var(--shading-s) inset, 0px 9px 0px 0px var(--shading-m), 0px 9px 0px 0px rgb(var(--primary));
 }
 
 #cta-primary:active {
@@ -398,7 +414,7 @@ main {
 }
 
 #feed {
-    margin-top: 3.5rem;
+    margin-top: var(--spacing-xl);
 }
 
 #feed-nav {
@@ -453,7 +469,7 @@ input[id=updates-radio]:checked ~ #nav-slider {
     display: flex;
     height: .1em;
     width: 33.33%;
-    background-color:  var(--primary);
+    background-color:  rgb(var(--primary));
     transition: all .24s ease;
 }
 
