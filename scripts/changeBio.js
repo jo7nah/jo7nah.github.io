@@ -4,7 +4,7 @@ const biographies = [
     "designer who grew up in the digital space 👾",
     "etc. other random biographies i guess",
     "i still need to do the animation for this",
-    "i wanna get into oil painting"
+    "i wanna try oil painting"
 ]
 
 function changeBio(){

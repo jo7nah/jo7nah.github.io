@@ -410,6 +410,8 @@ main {
     width: 100%;
     text-align: center;
     color: rgba(var(--text-color), 0.5);
+    display: flex;
+    flex-direction: column;
 }
 
 #feed-nav input[type=radio] {
@@ -432,9 +434,13 @@ input[id=updates-radio]:checked ~ #nav-slider {
     transform: translateX(200%);
 }
 
+.nav-icon {
+    height: 1.5em;
+}
+
 #nav-slider-track {
     position: absolute;
-    top: 1.5em;
+    bottom: 0em;
     display: flex;
     height: .1em;
     width: 100%;
@@ -443,7 +449,7 @@ input[id=updates-radio]:checked ~ #nav-slider {
 
 #nav-slider {
     position: absolute;
-    top: 1.5em;
+    bottom: 0em;
     display: flex;
     height: .1em;
     width: 33.33%;

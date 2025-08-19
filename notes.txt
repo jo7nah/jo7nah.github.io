@@ -1,5 +1,2 @@
 todo:
-- work icon
-- case studies icon
-- updates icon
 - settings/.. icon
