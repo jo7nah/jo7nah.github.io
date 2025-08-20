@@ -69,6 +69,10 @@ h1 {
     margin: 0;
 }
 
+ul {
+    list-style-type: none;
+}
+
 body {
     background-color: rgb(78, 78, 78);
     margin: 0;
@@ -428,6 +432,7 @@ main {
     color: rgba(var(--text-color), 0.5);
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 #feed-nav input[type=radio] {
@@ -436,6 +441,19 @@ main {
 
 #feed-nav input[type=radio]:checked + label {
     color: rgb(var(--text-color));
+    cursor: default;
+}
+
+#feed-nav:has(#work-radio:checked) ~ #feed-content {
+  transform: translateX(0%);
+}
+
+#feed-nav:has(#case-radio:checked) ~ #feed-content {
+  transform: translateX(-100%);
+}
+
+#feed-nav:has(#updates-radio:checked) ~ #feed-content {
+  transform: translateX(-200%);
 }
 
 input[id=work-radio]:checked ~ #nav-slider {
@@ -472,6 +490,29 @@ input[id=updates-radio]:checked ~ #nav-slider {
     background-color:  rgb(var(--primary));
     transition: all .24s ease;
 }
+
+#feed-content {
+    display: flex;
+    /* width: 300%; */
+    transition: all 1s ease;
+}
+
+#work-section {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+#case-section {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+#updates-section {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+
 
 footer {
     /* border: 2px solid green */
