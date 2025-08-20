@@ -84,6 +84,7 @@ body {
     max-width: 1024px;
     margin: 0 auto;
     background-color: rgb(var(--background-color));
+    overflow: hidden;
 }
 
 header {
@@ -494,7 +495,7 @@ input[id=updates-radio]:checked ~ #nav-slider {
 #feed-content {
     display: flex;
     /* width: 300%; */
-    transition: all 1s ease;
+    transition: transform .24s ease-out;
 }
 
 #work-section {
@@ -512,11 +513,9 @@ input[id=updates-radio]:checked ~ #nav-slider {
     flex-shrink: 0;
 }
 
-
-
 footer {
     /* border: 2px solid green */
-    margin-top: 2.25rem;
+    margin-top: var(--spacing-xxl);
     font-weight: 300;
     font-size: .75rem;
 }

@@ -1,1 +1,17 @@
 todo:
+
+
+
+clip-path: polygon(
+        /* top right corner */
+        calc(100% - 8px) 0, calc(100% - 8px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 8px, 100% 8px,
+        
+        /* bottom right corner */
+        100% calc(100% - 8px), calc(100% - 4px) calc(100% - 8px), calc(100% - 4px) calc(100% - 4px), calc(100% - 8px) calc(100% - 4px), calc(100% - 8px) 100%,
+        
+        /* bottom left corner */
+        8px 100%, 8px calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 8px), 0 calc(100% - 8px),
+
+        /* top left corner */
+        0 8px, 4px 8px, 4px 4px, 8px 4px, 8px 0
+    );
