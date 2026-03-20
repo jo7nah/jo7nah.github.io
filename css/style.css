@@ -504,7 +504,7 @@ input[id=updates-radio]:checked ~ #nav-slider {
 }
 
 #case-section {
-    width: 100%;
+    width: 99%;
     flex-shrink: 0;
 }
 
