@@ -519,3 +519,13 @@ footer {
     font-weight: 300;
     font-size: .75rem;
 }
+
+/* STAR CHART */
+
+#star-chart {
+    margin: 0 auto;
+    color: black;
+    background-color: #E7C7AC;
+    /* text-align: center; */
+    font-family: 'Courier New', Courier, monospace;
+}
