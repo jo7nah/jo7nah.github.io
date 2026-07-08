@@ -24,6 +24,18 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'AlteHaas';
+    src: url(../fonts/AlteHaasGroteskRegular.ttf) format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'AlteHaasBold';
+    src: url(../fonts/AlteHaasGroteskBold.ttf) format('opentype');
+    font-weight: bold;
+}
+
 :root {
     /* COLORS */
     --primary: var(--red-on-white);
@@ -74,9 +86,24 @@ ul {
 }
 
 body {
-    background-color: rgb(78, 78, 78);
+    /* background-color: rgb(78, 78, 78); */
     margin: 0;
-    height: 200vh;
+    /* height: 200vh; */
+}
+
+#coming-soon-wrapper {
+    height: 100vh;
+    width: 100vw;
+    background-color: #fefeff;
+}
+
+#coming-soon-text {
+    position: absolute;
+    translate: -50% -50%;
+    left: 50%;
+    top: 50%;
+    font: 2rem  'AlteHaasBold';
+    letter-spacing: -.5px;
 }
 
 .wrapper {
