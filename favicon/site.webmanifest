@@ -1,21 +1,21 @@
 {
-  "name": "Jonah Alisic",
-  "short_name": "Jonah",
+  "name": "jonah alisic: ux designer",
+  "short_name": "alisic",
   "icons": [
     {
-      "src": "/favicon/web-app-manifest-192x192.png",
+      "src": "/favicon/web-app-manifest-192x192.png?v=20261002",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/favicon/web-app-manifest-512x512.png",
+      "src": "/favicon/web-app-manifest-512x512.png?v=20261002",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#171717",
-  "background_color": "#171717",
+  "theme_color": "#f5f5f5",
+  "background_color": "#f5f5f5",
   "display": "standalone"
 }
