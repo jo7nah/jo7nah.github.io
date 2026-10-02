@@ -7,9 +7,10 @@
 }
 
 @font-face {
-    font-family: 'Inter';
+    font-family: Inter;
+    src: url(../fonts/Inter_Variable.ttf) format('opentype');
     font-style: normal;
-    src: url(../fonts/Inter_Variable.ttf) format('ttf');
+    font-weight: 100 900;
 }
 
 @font-face {
@@ -22,6 +23,84 @@
     font-family: 'AlteHaasBold';
     src: url(../fonts/AlteHaasGroteskBold.ttf) format('opentype');
     font-weight: bold;
+}
+
+:root {
+    font-family: Inter, Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#wrapper {
+    height: 300vh;
+    width: 320px;
+    margin: 0 auto;
+    padding: 0 16px;
+    border: 1px solid black;
+}
+
+header {
+    width: 288px;
+    position: fixed;
+    bottom: 24px;
+}
+
+#nav-bar ul {
+    display: flex;
+    width: inherit;
+    flex-direction: row;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0 auto;
+    padding: 6px;
+    background-color: rgba(217, 217, 217, .7);
+    border-radius: 24px;
+    box-shadow: inset 0px 0px 0px .5px rgba(255, 255, 255, .4), inset 2px 2px 4px 0px rgba(255, 255, 255, .25), inset -2px -2px 4px 0px rgba(255, 255, 255, .25);
+    justify-content: space-between;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+}
+
+#nav-profile {
+    aspect-ratio: 1/1;
+    height: 44px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+#img-shadow {
+    width: 44px;
+    height: 44px;
+    border-radius: 18px;
+    position: absolute;
+    box-shadow: inset .5px .5px 0px 0px rgba(255, 255, 255, .4), inset 2px 2px 4px 0px rgba(255, 255, 255, .4), inset -2px -2px 4px 0px rgba(255, 255, 255, .4);
+}
+
+#nav-profile a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#nav-profile img {
+    width: 100%;
+}
+
+.nav-item {
+    min-height: 44px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5em;
+    padding: 0 16px;
+    cursor: pointer;
+    & img {
+        height: 12px;
+    }
 }
 
 #coming-soon-wrapper {
