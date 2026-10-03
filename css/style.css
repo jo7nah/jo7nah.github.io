@@ -26,7 +26,29 @@
 }
 
 :root {
+    /* COLORS */
+    --primary-color-light: rgba(0, 115, 229, 1);
+    --background-color-light: rgba(245, 245, 245, 1);
+    --text-color-light: black;
+
+    /* SPACINGS */
+    --spacing-4: 4px;
+    --spacing-8: 8px;
+    --spacing-12: 12px;
+    --spacing-16: 16px;
+    --spacing-24: 24px;
+    --spacing-32: 32px;
+    --spacing-48: 48px;
+    --spacing-64: 64px;
+    --spacing-96: 96px;
+
+    /* FONTS */
     font-family: Inter, Helvetica, Arial, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 300vh;
 }
 
 a {
@@ -34,23 +56,61 @@ a {
     color: inherit;
 }
 
+h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -2%;
+    line-height: 120%;
+
+    & > span {
+        color: var(--primary-color-light);
+    }
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: -2%;
+}
+
+h3 {
+    font-size: 1.125rem;
+    font-weight: 300;
+    letter-spacing: -2%;
+    line-height: 120%;
+}
+
+h4 {
+    font-size: 1.0625rem;
+    font-weight: 400;
+    letter-spacing: -1%;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 120%;
+    letter-spacing: -1%;
+}
+
 #wrapper {
-    height: 300vh;
-    width: 320px;
     margin: 0 auto;
-    padding: 0 16px;
-    border: 1px solid black;
+    border: 1px solid red;
 }
 
 header {
-    width: 288px;
+    width: 100%;
+    padding: 0 16px;
     position: fixed;
     bottom: 24px;
 }
 
+main {
+    padding: 0 16px;
+}
+
 #nav-bar ul {
     display: flex;
-    width: inherit;
     flex-direction: row;
     list-style: none;
     font-size: 1rem;
@@ -63,6 +123,7 @@ header {
     justify-content: space-between;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
+    max-width: 1000px;
 }
 
 #nav-profile {
@@ -114,6 +175,6 @@ header {
     translate: -50% -50%;
     left: 50%;
     top: 50%;
-    font: 2rem  'AlteHaasBold';
+    font: 2rem 'AlteHaasBold';
     letter-spacing: -.5px;
 }
