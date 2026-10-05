@@ -109,6 +109,7 @@ header {
     padding: 0 16px;
     position: fixed;
     bottom: var(--spacing-24);
+    z-index: 1000;
 }
 
 main {
@@ -146,6 +147,14 @@ main {
     height: 44px;
     border-radius: 18px;
     overflow: hidden;
+    & a {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+    & img {
+        width: 100%;
+    }
 }
 
 #profile-img-shadow {
@@ -156,14 +165,9 @@ main {
     box-shadow: inset .5px .5px 0px 0px rgba(255, 255, 255, .4), inset 2px 2px 4px 0px rgba(255, 255, 255, .4), inset -2px -2px 4px 0px rgba(255, 255, 255, .4);
 }
 
-#nav-profile a {
-    display: block;
-    height: 100%;
-    width: 100%;
-}
-
-#nav-profile img {
-    width: 100%;
+#nav-contact svg {
+    color: var(--primary-color-light);
+    opacity: 1;
 }
 
 .nav-btn {
@@ -178,6 +182,10 @@ main {
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     cursor: pointer;
+    & > svg {
+        height: 20px;
+        opacity: .7;
+    }
 }
 
 .nav-item {
@@ -188,8 +196,9 @@ main {
     gap: .5em;
     padding: 0 16px;
     cursor: pointer;
-    & img {
+    & > svg {
         height: 12px;
+        opacity: .7;
     }
 }
 
@@ -197,7 +206,13 @@ main {
     margin-bottom: var(--spacing-64);
 }
 
-#featured-projects {
+#below-fold {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-96);
+}
+
+.main-section {
     position: relative;
     & > h2 {
         margin-bottom: var(--spacing-24);
@@ -209,9 +224,14 @@ main {
     gap: var(--spacing-8);
     align-items: end;
     margin-bottom: var(--spacing-16);
+    & span {
+        opacity: .8;
+        letter-spacing: -1%;
+        line-height: 110%;
+    }
 }
 
-.project-preview {
+.project-image {
     position: relative;
     & > img {
         width: 100%;
@@ -243,6 +263,51 @@ main {
     position: absolute;
     right: 6px;
     bottom: 6px;
+    & > svg {
+        height: 12px;
+        opacity: .7;
+    }
+}
+
+.resume-list {
+    list-style: none;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -1%;
+    line-height: 120%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+    & > li {
+        display: flex;
+        gap: var(--spacing-12);
+        & svg {
+            margin-top: 4px;
+            height: 12px;
+            width: 12px;
+        }
+        & > div {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    & > li:nth-of-type(1) {
+        opacity: .5;
+    }
+    & span {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+}
+
+#about-me p {
+    text-indent: 12px;
+    margin-bottom: 1em;
+    text-align: justify;
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
 }
 
 #coming-soon-wrapper {
