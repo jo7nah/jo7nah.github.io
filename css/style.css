@@ -27,9 +27,10 @@
 
 :root {
     /* COLORS */
-    --primary-color-light: rgba(0, 115, 229, 1);
-    --background-color-light: rgba(245, 245, 245, 1);
-    --text-color-light: black;
+    --primary-color-light: rgba(0, 130, 65, 1);
+    --background-color-light: rgba(244, 245, 245, 1);
+    --text-color-light: rgba(7, 19, 13, 1);
+    --transparency-background: rgba(215, 218, 217, .7);
 
     /* SPACINGS */
     --spacing-4: 4px;
@@ -55,6 +56,7 @@ html {
 
 body {
     background-color: var(--background-color-light);
+    color: var(--text-color-light);
 }
 
 a {
@@ -125,7 +127,7 @@ main {
     font-weight: 400;
     margin: 0 auto;
     padding: 6px;
-    background-color: rgba(217, 217, 217, .7);
+    background-color: var(--transparency-background);
     border-radius: 24px;
     box-shadow: inset 0px 0px 0px .5px rgba(255, 255, 255, .4), inset 2px 2px 4px 0px rgba(255, 255, 255, .25), inset -2px -2px 4px 0px rgba(255, 255, 255, .25);
     -webkit-backdrop-filter: blur(30px);
@@ -133,8 +135,30 @@ main {
     max-width: 320px;
     text-wrap: nowrap;
     pointer-events: all;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     & > .nav-item {
         margin: 0 0 0 auto;
+    }
+    & > :nth-child(n+2) {
+        display: none;
+    }
+}
+
+#nav-bar.open-nav {
+    transition: all 3s ease;
+    & > :nth-child(n+2) {
+        display: flex;
+    }
+}
+
+#nav-bar.closed-nav {
+    transition: all 3s ease;
+    & > :nth-child(n+2) {
+        display: none;
     }
 }
 
@@ -277,12 +301,17 @@ main {
     min-height: 44px;
     align-items: center;
     border-radius: 18px;
-    background-color: rgba(217, 217, 217, .7);
+    background-color: var(--transparency-background);
     box-shadow: inset .5px .5px 0px 0px rgba(255, 255, 255, .4), inset 2px 2px 4px 0px rgba(255, 255, 255, .4), inset -2px -2px 4px 0px rgba(255, 255, 255, .4);
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     text-wrap: nowrap;
     cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     & > svg {
         height: 12px;
         opacity: .7;
