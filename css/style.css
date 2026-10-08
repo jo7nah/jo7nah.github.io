@@ -174,13 +174,16 @@ main {
     height: 44px;
     border-radius: 18px;
     overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
     & a {
         display: block;
         height: 100%;
         width: 100%;
+        -webkit-tap-highlight-color: transparent;
     }
     & img {
         width: 100%;
+        -webkit-tap-highlight-color: transparent;
     }
 }
 
@@ -190,6 +193,7 @@ main {
     border-radius: 18px;
     position: absolute;
     box-shadow: inset .5px .5px 0px 0px rgba(255, 255, 255, .4), inset 2px 2px 4px 0px rgba(255, 255, 255, .4), inset -2px -2px 4px 0px rgba(255, 255, 255, .4);
+    -webkit-tap-highlight-color: transparent;
 }
 
 #nav-contact svg {
@@ -210,6 +214,7 @@ main {
     backdrop-filter: blur(30px);
     cursor: pointer;
     overflow: visible;
+    -webkit-tap-highlight-color: transparent;
     & > svg {
         height: 20px;
         opacity: .7;
@@ -225,6 +230,7 @@ main {
     padding: 0 16px;
     cursor: pointer;
     overflow: visible;
+    -webkit-tap-highlight-color: transparent;
     & > svg {
         height: 12px;
         opacity: .7;
@@ -279,6 +285,7 @@ main {
 .project-image {
     position: relative;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     & > img {
         width: 100%;
         border-radius: var(--spacing-24);
@@ -312,6 +319,7 @@ main {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
     & > svg {
         height: 12px;
         opacity: .7;
@@ -323,6 +331,7 @@ main {
     position: absolute;
     right: 6px;
     bottom: 6px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .resume-list {
@@ -395,6 +404,7 @@ footer {
         font-size: 1rem;
         letter-spacing: -1%;
         min-height: 44px;
+        -webkit-tap-highlight-color: transparent;
     }
     & svg {
         height: 12px;
