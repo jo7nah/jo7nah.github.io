@@ -412,6 +412,25 @@ footer {
     }
 }
 
+#projects-subpage > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-48);
+    margin-top: var(--spacing-24);
+}
+
+.subpage-headline {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    gap: var(--spacing-12);
+    margin-top: var(--spacing-24);
+    & svg {
+        height: 16px;
+        color: var(--primary-color-light);
+    }
+}
+
 #footer-contact svg {
     color: var(--primary-color-light);
     opacity: 1;
