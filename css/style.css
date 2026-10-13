@@ -419,6 +419,24 @@ footer {
     margin-top: var(--spacing-24);
 }
 
+#about-subpage > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-48);
+    margin-top: var(--spacing-24);
+    & h4 {
+        margin-bottom: var(--spacing-12);
+    }
+    & p {
+        text-indent: var(--spacing-12);
+        margin-bottom: 1.5em;
+        text-align: justify;
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
+    }
+}
+
 .subpage-headline {
     display: flex;
     min-height: 44px;
