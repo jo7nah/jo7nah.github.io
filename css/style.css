@@ -183,6 +183,7 @@ main {
 #nav-bar.closed-nav {
     animation: closedNav .36s var(--smooth-cubic-bezier) forwards;
     & > :nth-child(n+2) {
+        display: flex;
         animation: closedNavElements .36s var(--smooth-cubic-bezier) forwards;
     }
     & #nav-menu {
