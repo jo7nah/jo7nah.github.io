@@ -26,13 +26,28 @@
 }
 
 :root {
-    /* COLORS */
-    --primary-color-light: rgba(0, 130, 65, 1);
-    --background-color-light: rgba(244, 245, 245, 1);
-    --text-color-light: rgba(7, 19, 13, 1);
-    --transparency-background: rgba(215, 218, 217, .7);
+    /* --- COLORS --- */
 
-    /* SPACINGS */
+    /* LIGHT MODE */
+    --light-primary-color: rgba(0, 130, 65, 1);
+    --light-background-color: rgba(244, 245, 245, 1);
+    --light-text-color: rgba(7, 19, 13, 1);
+    --light-transparency-background: rgba(215, 218, 217, .7);
+
+    /* DARK MODE */
+    --dark-primary-color: ;
+    --dark-background-color: ;
+    --dark-text-color: ;
+    --dark-transparency-background: ;
+
+    /* COLOR VARIABLES */
+    --primary-color: var(--light-primary-color);
+    --background-color: var(--light-background-color);
+    --text-color: var(--light-text-color);
+    --transparency-background: var(--light-transparency-background);
+
+
+    /* --- SPACINGS --- */
     --spacing-4: 4px;
     --spacing-8: 8px;
     --spacing-12: 12px;
@@ -43,8 +58,12 @@
     --spacing-64: 64px;
     --spacing-96: 96px;
 
-    /* FONTS */
+
+    /* --- FONTS --- */
     font-family: Inter, Helvetica, Arial, sans-serif;
+
+    /* --- ANIMATION BEZIERS --- */
+    --smooth-cubic-bezier: cubic-bezier(.4, 0, .6, 1);
 }
 
 html {
@@ -55,8 +74,8 @@ html {
 }
 
 body {
-    background-color: var(--background-color-light);
-    color: var(--text-color-light);
+    background-color: var(--background-color);
+    color: var(--text-color);
     min-height: 100vh;
 }
 
@@ -72,7 +91,7 @@ h1 {
     line-height: 120%;
 
     & > span {
-        color: var(--primary-color-light);
+        color: var(--primary-color);
     }
 }
 
@@ -134,6 +153,7 @@ main {
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     max-width: 320px;
+    max-height: 56px;
     text-wrap: nowrap;
     pointer-events: all;
     -webkit-touch-callout: none;
@@ -150,16 +170,100 @@ main {
 }
 
 #nav-bar.open-nav {
-    transition: all 3s ease;
+    animation: openNav .24s var(--smooth-cubic-bezier) forwards;
     & > :nth-child(n+2) {
         display: flex;
+        animation: openNavElements .36s var(--smooth-cubic-bezier) forwards;
+    }
+    & #nav-menu {
+        animation: menuToClose .36s var(--smooth-cubic-bezier);
     }
 }
 
 #nav-bar.closed-nav {
-    transition: all 3s ease;
+    animation: closedNav .36s var(--smooth-cubic-bezier) forwards;
     & > :nth-child(n+2) {
-        display: none;
+        animation: closedNavElements .36s var(--smooth-cubic-bezier) forwards;
+    }
+    & #nav-menu {
+        animation: closeToMenu .36s var(--smooth-cubic-bezier);
+    }
+}
+
+@keyframes openNav {
+    0% {
+        max-height: 56px;
+    }
+    100% {
+        max-height: 264px;
+    }
+}
+
+@keyframes openNavElements {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes closedNav {
+    0% {
+        max-height: 264px;
+    }
+    33% {
+        max-height: 264px;
+    }
+    100% {
+        max-height: 56px;
+    }
+}
+
+@keyframes closedNavElements {
+    0% {
+        display: flex;
+        opacity: 1;
+    }
+    66% {
+        display: flex;
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes menuToClose {
+    0% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0;
+    }
+    55% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes closeToMenu {
+    0% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0;
+    }
+    55% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -198,7 +302,7 @@ main {
 }
 
 #nav-contact svg {
-    color: var(--primary-color-light);
+    color: var(--primary-color);
     opacity: 1;
 }
 
@@ -419,7 +523,7 @@ main {
     margin: var(--spacing-24) 0;
     & svg {
         height: 16px;
-        color: var(--text-color-light);
+        color: var(--text-color);
         opacity: .7;
     }
 }
@@ -462,7 +566,7 @@ footer {
 }
 
 #footer-contact svg {
-    color: var(--primary-color-light);
+    color: var(--primary-color);
     opacity: 1;
 }
 
