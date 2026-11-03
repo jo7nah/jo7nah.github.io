@@ -29,16 +29,16 @@
     /* --- COLORS --- */
 
     /* LIGHT MODE */
-    --light-primary-color: rgba(0, 130, 65, 1);
-    --light-background-color: rgba(244, 245, 245, 1);
-    --light-text-color: rgba(7, 19, 13, 1);
-    --light-transparency-background: rgba(215, 218, 217, .7);
+    --light-primary-color: hsla(150, 90%, 27%, 1);
+    --light-background-color: hsla(160, 20%, 97%, 1);
+    --light-text-color: hsla(160, 40%, 4%, 1);
+    --light-transparency-background: hsla(150, 4%, 85%, .7);
 
     /* DARK MODE */
-    --dark-primary-color: ;
-    --dark-background-color: ;
-    --dark-text-color: ;
-    --dark-transparency-background: ;
+    --dark-primary-color: hsla(150, 80%, 40%, 1);
+    --dark-background-color: hsla(160, 40%, 4%, 1);
+    --dark-text-color: hsla(150, 40%, 90%, 1);
+    --dark-transparency-background: hsla(160, 40%, 10%, .7);
 
     /* COLOR VARIABLES */
     --primary-color: var(--light-primary-color);
@@ -103,7 +103,7 @@ h2 {
 
 h3 {
     font-size: 1.125rem;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: -2%;
     line-height: 120%;
 }
@@ -574,7 +574,7 @@ footer {
 #coming-soon-wrapper {
     height: 100vh;
     width: 100vw;
-    background-color: #fefeff;
+    background-color: var(--dark-background-color);
 }
 
 #coming-soon-text {
@@ -584,4 +584,6 @@ footer {
     top: 50%;
     font: 2rem 'AlteHaasBold';
     letter-spacing: -.5px;
+    color: var(--dark-primary-color);
+    text-align: center;
 }
