@@ -33,18 +33,27 @@
     --light-background-color: hsla(160, 20%, 97%, 1);
     --light-text-color: hsla(160, 40%, 4%, 1);
     --light-transparency-background: hsla(150, 4%, 85%, .7);
+    --light-stroke: hsla(0, 0%, 100%, .4);
+    --light-highlight: hsla(0, 0%, 100%, .25);
+    --light-button-tint: hsla(0, 0%, 0%, .05);
 
     /* DARK MODE */
     --dark-primary-color: hsla(150, 80%, 40%, 1);
     --dark-background-color: hsla(160, 40%, 4%, 1);
     --dark-text-color: hsla(150, 40%, 90%, 1);
     --dark-transparency-background: hsla(160, 40%, 10%, .7);
+    --dark-stroke: hsla(150, 20%, 50%, .4);
+    --dark-highlight: hsla(150, 20%, 20%, .25);
+    --dark-button-tint: hsla(0, 0%, 100%, .05);
 
     /* COLOR VARIABLES */
-    --primary-color: var(--light-primary-color);
-    --background-color: var(--light-background-color);
-    --text-color: var(--light-text-color);
-    --transparency-background: var(--light-transparency-background);
+    --primary-color: var(--dark-primary-color);
+    --background-color: var(--dark-background-color);
+    --text-color: var(--dark-text-color);
+    --transparency-background: var(--dark-transparency-background);
+    --stroke: var(--dark-stroke);
+    --highlight: var(--dark-highlight);
+    --button-tint: var(--dark-button-tint);
 
 
     /* --- SPACINGS --- */
@@ -149,7 +158,7 @@ main {
     padding: 6px;
     background-color: var(--transparency-background);
     border-radius: 24px;
-    box-shadow: inset 0px 0px 0px .5px rgba(255, 255, 255, .4), inset 2px 2px 4px 0px rgba(255, 255, 255, .25), inset -2px -2px 4px 0px rgba(255, 255, 255, .25);
+    box-shadow: inset 0px 0px 0px .5px var(--stroke), inset 2px 2px 4px 0px var(--highlight), inset -2px -2px 4px 0px var(--highlight);
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     max-width: 320px;
@@ -298,7 +307,7 @@ main {
     height: 44px;
     border-radius: 18px;
     position: absolute;
-    box-shadow: inset .5px .5px 0px 0px rgba(255, 255, 255, .4), inset 2px 2px 4px 0px rgba(255, 255, 255, .4), inset -2px -2px 4px 0px rgba(255, 255, 255, .4);
+    box-shadow: inset .5px .5px 0px 0px var(--stroke), inset 2px 2px 4px 0px var(--highlight), inset -2px -2px 4px 0px var(--highlight);
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -313,9 +322,9 @@ main {
     justify-content: center;
     aspect-ratio: 1/1;
     height: 44px;
-    background-color: rgba(0, 0, 0, .05);
+    background-color: var(--button-tint);
     border-radius: 18px;
-    box-shadow: inset .5px .5px 0px 0px rgba(255, 255, 255, .4);
+    box-shadow: inset .5px .5px 0px 0px var(--stroke);
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     cursor: pointer;
@@ -340,6 +349,7 @@ main {
     & > svg {
         height: 12px;
         opacity: .7;
+        /* color: var(--primary-color); */
     }
 }
 
@@ -404,7 +414,7 @@ main {
     width: 100%;
     border-radius: var(--spacing-24);
     position: absolute;
-    box-shadow: inset 0px 0px 0px .5px rgba(255, 255, 255, .8), inset 2px 2px 4px 0px rgba(255, 255, 255, .4), inset -2px -2px 4px 0px rgba(255, 255, 255, .4);
+    box-shadow: inset 0px 0px 0px .5px var(--stroke), inset 2px 2px 4px 0px var(--stroke), inset -2px -2px 4px 0px var(--stroke);
 }
 
 .generic-btn {
@@ -415,7 +425,7 @@ main {
     align-items: center;
     border-radius: 18px;
     background-color: var(--transparency-background);
-    box-shadow: inset .5px .5px 0px 0px rgba(255, 255, 255, .4), inset 2px 2px 4px 0px rgba(255, 255, 255, .4), inset -2px -2px 4px 0px rgba(255, 255, 255, .4);
+    box-shadow: inset .5px .5px 0px 0px var(--stroke), inset 2px 2px 4px 0px var(--stroke), inset -2px -2px 4px 0px var(--stroke);
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     text-wrap: nowrap;
@@ -429,6 +439,7 @@ main {
     & > svg {
         height: 12px;
         opacity: .7;
+        color: var(--primary-color);
     }
 }
 
@@ -524,7 +535,7 @@ main {
     margin: var(--spacing-24) 0;
     & svg {
         height: 16px;
-        color: var(--text-color);
+        color: var(--primary-color);
         opacity: .7;
     }
 }
