@@ -466,7 +466,7 @@ main {
         & svg {
             margin-top: 4px;
             height: 12px;
-            width: 12px;
+            min-width: 12px;
         }
         & > div {
             display: flex;
@@ -492,16 +492,31 @@ main {
     }
 }
 
-#projects-subpage > div {
+.subpage-content {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-48);
 }
 
-#about-subpage > div {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-48);
+#resume-subpage {
+    & h3 {
+        margin-bottom: var(--spacing-24);
+    }
+    & .resume-list {
+        margin-bottom: var(--spacing-48);
+        gap: var(--spacing-32);
+    }
+    & li:nth-of-type(1) {
+        opacity: 1;
+    }
+    & .generic-btn {
+        position: relative;
+        translate: -50% 0%;
+        left: 50%;
+    }
+}
+
+#about-subpage {
     & h4 {
         margin-bottom: var(--spacing-12);
     }
