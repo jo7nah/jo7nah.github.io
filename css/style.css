@@ -99,7 +99,7 @@ h1 {
     letter-spacing: -2%;
     line-height: 120%;
 
-    & > span {
+    &>span {
         color: var(--primary-color);
     }
 }
@@ -170,20 +170,24 @@ main {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    & > .nav-item {
+
+    &>.nav-item {
         margin: 0 0 0 auto;
     }
-    & > :nth-child(n+2) {
+
+    &> :nth-child(n+2) {
         display: none;
     }
 }
 
 #nav-bar.open-nav {
     animation: openNav .24s var(--smooth-cubic-bezier) forwards;
-    & > :nth-child(n+2) {
+
+    &> :nth-child(n+2) {
         display: flex;
         animation: openNavElements .36s var(--smooth-cubic-bezier) forwards;
     }
+
     & #nav-menu {
         animation: menuToClose .36s var(--smooth-cubic-bezier);
     }
@@ -191,10 +195,12 @@ main {
 
 #nav-bar.closed-nav {
     animation: closedNav .36s var(--smooth-cubic-bezier) forwards;
-    & > :nth-child(n+2) {
+
+    &> :nth-child(n+2) {
         display: flex;
         animation: closedNavElements .36s var(--smooth-cubic-bezier) forwards;
     }
+
     & #nav-menu {
         animation: closeToMenu .36s var(--smooth-cubic-bezier);
     }
@@ -204,6 +210,7 @@ main {
     0% {
         max-height: 56px;
     }
+
     100% {
         max-height: 264px;
     }
@@ -213,9 +220,11 @@ main {
     0% {
         opacity: 0;
     }
+
     33% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -225,9 +234,11 @@ main {
     0% {
         max-height: 264px;
     }
+
     33% {
         max-height: 264px;
     }
+
     100% {
         max-height: 56px;
     }
@@ -238,10 +249,12 @@ main {
         display: flex;
         opacity: 1;
     }
+
     66% {
         display: flex;
         opacity: 0;
     }
+
     100% {
         opacity: 0;
     }
@@ -251,12 +264,15 @@ main {
     0% {
         opacity: 1;
     }
+
     45% {
         opacity: 0;
     }
+
     55% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -266,12 +282,15 @@ main {
     0% {
         opacity: 1;
     }
+
     45% {
         opacity: 0;
     }
+
     55% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -290,12 +309,14 @@ main {
     border-radius: 18px;
     overflow: hidden;
     -webkit-tap-highlight-color: transparent;
+
     & a {
         display: block;
         height: 100%;
         width: 100%;
         -webkit-tap-highlight-color: transparent;
     }
+
     & img {
         width: 100%;
         -webkit-tap-highlight-color: transparent;
@@ -330,8 +351,9 @@ main {
     cursor: pointer;
     overflow: visible;
     -webkit-tap-highlight-color: transparent;
-    & > svg {
-        height: 20px;
+
+    &>svg {
+        height: 1.25rem;
         opacity: .7;
     }
 }
@@ -346,10 +368,11 @@ main {
     cursor: pointer;
     overflow: visible;
     -webkit-tap-highlight-color: transparent;
-    & > svg {
-        height: 12px;
+
+    &>svg {
+        height: .75rem;
         opacity: .7;
-        /* color: var(--primary-color); */
+        color: var(--primary-color);
     }
 }
 
@@ -368,15 +391,18 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    & > h2 {
+
+    &>h2 {
         margin-bottom: var(--spacing-24);
     }
-    & > div:not(.generic-btn) {
+
+    &>div:not(.generic-btn) {
         display: flex;
         flex-direction: column;
         gap: var(--spacing-48);
     }
-    & > .generic-btn {
+
+    &>.generic-btn {
         position: relative;
         margin: 0 auto;
         margin-top: var(--spacing-48);
@@ -392,8 +418,9 @@ main {
     gap: var(--spacing-8);
     align-items: end;
     margin-bottom: var(--spacing-16);
+
     & span {
-        opacity: .8;
+        opacity: .7;
         letter-spacing: -1%;
     }
 }
@@ -402,7 +429,8 @@ main {
     position: relative;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    & > img {
+
+    &>img {
         width: 100%;
         border-radius: var(--spacing-24);
         display: block;
@@ -436,8 +464,9 @@ main {
     -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    & > svg {
-        height: 12px;
+
+    &>svg {
+        height: .75rem;
         opacity: .7;
         color: var(--primary-color);
     }
@@ -453,40 +482,94 @@ main {
 
 .resume-list {
     list-style: none;
-    font-size: 17px;
+    font-size: 1.0625rem;
     font-weight: 600;
     letter-spacing: -1%;
     line-height: 120%;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-24);
-    & > li {
+    transition: height 3s ease;
+
+    &>li {
         display: flex;
         gap: var(--spacing-12);
+
         & svg {
             margin-top: 4px;
-            height: 12px;
-            min-width: 12px;
+            height: .75rem;
+            min-width: .75rem;
         }
-        & > div {
+
+        &>div {
             display: flex;
             flex-direction: column;
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+            }
         }
     }
-    & > li:nth-of-type(1) {
+
+    &>li:nth-of-type(1) {
         opacity: .5;
     }
-    & span {
-        font-size: 12px;
+
+    & span.resume-details {
+        font-size: .75rem;
         font-weight: 400;
         line-height: 150%;
     }
+
+    & span.tasks {
+        display: flex;
+        gap: var(--spacing-8);
+        min-height: 44px;
+        align-items: center;
+        padding-left: var(--spacing-16);
+        font-size: 1rem;
+        font-weight: 400;
+        opacity: .7;
+        cursor: pointer;
+
+        &>svg {
+            height: .75rem;
+            translate: 0% -10%;
+            transition: transform .24s var(--smooth-cubic-bezier);
+        }
+    }
+
+    & .resume-dd-menu ul {
+        display: none;
+        list-style: disc;
+        padding-left: var(--spacing-32);
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: -1%;
+        line-height: 120%;
+        flex-direction: column;
+        gap: var(--spacing-4);
+    }
+
+    & .resume-dd-menu.dd-open {
+        & ul {
+            display: flex;
+        }
+
+        & svg {
+            transform: scaleY(-1);
+        }
+    }
+
 }
+
 
 #about-me p {
     text-indent: var(--spacing-12);
     margin-bottom: 1.5em;
     text-align: justify;
+
     &:nth-last-of-type(1) {
         margin-bottom: 0;
     }
@@ -502,13 +585,16 @@ main {
     & h3 {
         margin-bottom: var(--spacing-24);
     }
+
     & .resume-list {
         margin-bottom: var(--spacing-48);
         gap: var(--spacing-32);
     }
+
     & li:nth-of-type(1) {
         opacity: 1;
     }
+
     & .generic-btn {
         position: relative;
         translate: -50% 0%;
@@ -520,10 +606,12 @@ main {
     & h4 {
         margin-bottom: var(--spacing-12);
     }
+
     & p {
         text-indent: var(--spacing-12);
         margin-bottom: 1.5em;
         text-align: justify;
+
         &:nth-last-of-type(1) {
             margin-bottom: 0;
         }
@@ -531,12 +619,14 @@ main {
 }
 
 #legal-subpage {
-    & > h2 {
+    &>h2 {
         margin: var(--spacing-64) 0 var(--spacing-16);
     }
+
     & h3 {
-    margin: var(--spacing-32) 0 var(--spacing-12);
+        margin: var(--spacing-32) 0 var(--spacing-12);
     }
+
     & p {
         margin-bottom: var(--spacing-12);
     }
@@ -548,8 +638,9 @@ main {
     align-items: center;
     gap: var(--spacing-12);
     margin: var(--spacing-24) 0;
+
     & svg {
-        height: 16px;
+        height: 1rem;
         color: var(--primary-color);
         opacity: .7;
     }
@@ -561,6 +652,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-24);
+
     & span {
         font-size: .75rem;
         letter-spacing: -2%;
@@ -573,10 +665,12 @@ footer {
     flex-direction: column;
     gap: var(--spacing-8);
     overflow: visible;
+
     & div {
         display: flex;
         justify-content: space-between;
     }
+
     & a {
         display: flex;
         gap: var(--spacing-8);
@@ -586,8 +680,9 @@ footer {
         min-height: 44px;
         -webkit-tap-highlight-color: transparent;
     }
+
     & svg {
-        height: 12px;
+        height: .75rem;
         opacity: .7;
     }
 }
