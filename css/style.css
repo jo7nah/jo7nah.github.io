@@ -112,7 +112,7 @@ h2 {
 
 h3 {
     font-size: 1.125rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: -2%;
     line-height: 120%;
 }
@@ -495,10 +495,18 @@ main {
         display: flex;
         gap: var(--spacing-12);
 
+        & img {
+            margin-top: .15rem;
+            height: 1rem;
+            min-width: 1rem;
+            aspect-ratio: 1;
+        }
+
         & svg {
-            margin-top: 4px;
+            margin-top: .25rem;
             height: .75rem;
             min-width: .75rem;
+            aspect-ratio: 1;
         }
 
         &>div {
@@ -584,6 +592,7 @@ main {
 #resume-subpage {
     & h3 {
         margin-bottom: var(--spacing-24);
+        /* font-weight: 600; */
     }
 
     & .resume-list {
@@ -642,7 +651,7 @@ main {
     & svg {
         height: 1rem;
         color: var(--primary-color);
-        opacity: .7;
+        /* opacity: .7; */
     }
 }
 
