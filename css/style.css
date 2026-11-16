@@ -683,6 +683,7 @@ main {
         & div {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             gap: var(--spacing-4);
 
             & span:nth-of-type(1) {
@@ -699,12 +700,36 @@ main {
     display: flex;
     align-items: center;
     gap: 2px;
+    justify-content: center;
 
+    
     & div {
         height: 20px;
         width: 2px;
         background-color: var(--text-color);
         border-radius: 999px;
+
+        &:nth-of-type(1) {
+            height: 10px;
+        }
+        &:nth-of-type(2) {
+            height: 18px;
+        }
+        &:nth-of-type(3) {
+            height: 6px;
+        }
+        &:nth-of-type(4) {
+            height: 14px;
+        }
+        &:nth-of-type(5) {
+            height: 20px;
+        }
+        &:nth-of-type(6) {
+            height: 12px;
+        }
+        &:nth-of-type(7) {
+            height: 6px;
+        }
     }
 }
 
