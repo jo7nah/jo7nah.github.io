@@ -644,6 +644,12 @@ main {
     }
 }
 
+#about-activities {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+}
+
 .about-activities-headline {
     display: flex;
     flex-direction: row;
@@ -655,6 +661,54 @@ main {
         opacity: .7;
     }
 }
+
+.about-activities-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    background-color: hsla(160, 0%, 10%, .7);
+    border-radius: 22px;
+    box-shadow: inset 0px 0px 0px .5px hsla(150, 0%, 50%, .4), inset 2px 2px 4px 0px hsla(150, 0%, 20%, .25), inset -2px -2px 4px 0px hsla(150, 0%, 20%, .25);
+
+    & img {
+        height: 44px;
+        width: 44px;
+        border-radius: 16px;
+    }
+
+    &>div:nth-of-type(1) {
+        display: flex;
+        gap: var(--spacing-12);
+
+        & div {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-4);
+
+            & span:nth-of-type(1) {
+                font-weight: 500;
+            }
+        }
+        
+    }
+}
+
+#visualizer {
+    height: 44px;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    & div {
+        height: 20px;
+        width: 2px;
+        background-color: var(--text-color);
+        border-radius: 999px;
+    }
+}
+
+
 
 #legal-subpage {
     &>h2 {
