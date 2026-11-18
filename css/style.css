@@ -146,6 +146,8 @@ header {
 
 main {
     padding: 0 16px;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 #nav-bar {
@@ -423,8 +425,11 @@ main {
     }
 }
 
+
 .project-wrapper {
     position: relative;
+    max-width: 484px;
+    margin: 0 auto;
 }
 
 .project-headline {
@@ -554,6 +559,10 @@ main {
         font-weight: 400;
         opacity: .7;
         cursor: pointer;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
 
         &>svg {
             height: .75rem;
@@ -587,14 +596,20 @@ main {
 }
 
 
-#about-me p {
-    text-indent: var(--spacing-12);
-    margin-bottom: 1.5em;
-    text-align: justify;
-
-    &:nth-last-of-type(1) {
-        margin-bottom: 0;
+#about-me {
+    &>div {
+        gap: 0;
     }
+    & p {
+        text-indent: var(--spacing-12);
+        margin-bottom: 1.5em;
+        text-align: justify;
+    
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
+    }
+
 }
 
 .subpage-content {
@@ -783,11 +798,12 @@ main {
 }
 
 footer {
-    margin: var(--spacing-96) 0;
+    margin: var(--spacing-96) auto;
     padding: 0 16px;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-24);
+    max-width: 1024px;
 
     & span {
         font-size: .75rem;
@@ -843,4 +859,29 @@ footer {
     letter-spacing: -.5px;
     color: var(--dark-primary-color);
     text-align: center;
+}
+
+@media (min-width: 612px) {
+
+    #about-me>div {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: var(--spacing-24);
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    #featured-projects>div {
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-24);
+    }
+
+    #projects-subpage .subpage-content {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
 }
