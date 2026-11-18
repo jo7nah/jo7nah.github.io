@@ -349,7 +349,9 @@ main {
 }
 
 #nav-menu {
-    justify-content: flex-end;
+    width: 126px;
+    justify-content: end;
+
 }
 
 .nav-btn {
@@ -842,23 +844,6 @@ footer {
 #footer-contact svg {
     color: var(--primary-color);
     opacity: 1;
-}
-
-#coming-soon-wrapper {
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--dark-background-color);
-}
-
-#coming-soon-text {
-    position: absolute;
-    translate: -50% -50%;
-    left: 50%;
-    top: 50%;
-    font: 2rem 'AlteHaasBold';
-    letter-spacing: -.5px;
-    color: var(--dark-primary-color);
-    text-align: center;
 }
 
 @media (min-width: 612px) {
