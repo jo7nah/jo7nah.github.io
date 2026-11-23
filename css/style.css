@@ -366,7 +366,7 @@ main {
     box-shadow: inset .5px .5px 0px 0px var(--stroke);
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
-    cursor: pointer;
+    cursor: not-allowed;
     overflow: visible;
     -webkit-tap-highlight-color: transparent;
 
