@@ -337,7 +337,7 @@ main {
     height: 44px;
     border-radius: 18px;
     position: absolute;
-    box-shadow: inset .5px .5px 0px 0px var(--stroke), inset 2px 2px 4px 0px var(--highlight), inset -2px -2px 4px 0px var(--highlight);
+    box-shadow: inset .5px .5px 0px 0px var(--light-stroke), inset 2px 2px 4px 0px var(--light-highlight), inset -2px -2px 4px 0px var(--light-highlight);
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -464,7 +464,8 @@ main {
     width: 100%;
     border-radius: var(--spacing-24);
     position: absolute;
-    box-shadow: inset 0px 0px 0px .5px var(--stroke), inset 2px 2px 4px 0px var(--stroke), inset -2px -2px 4px 0px var(--stroke);
+    box-shadow: inset 0px 0px 0px .5px var(--light-stroke), inset 2px 2px 4px 0px var(--light-highlight), inset -2px -2px 4px 0px var(--light-highlight);
+    opacity: .35;
 }
 
 .generic-btn {
