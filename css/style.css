@@ -821,7 +821,6 @@ main {
 }
 
 .image-wrapper {
-    /* margin-top: var(--spacing-32); */
     display: flex;
     flex-direction: column;
     gap: var(--spacing-24);
@@ -885,6 +884,10 @@ footer {
 }
 
 @media (min-width: 1024px) {
+
+    .project-wrapper {
+        min-width: 484px;
+    }
 
     #featured-projects>div {
         display: flex;
