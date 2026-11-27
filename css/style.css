@@ -657,6 +657,17 @@ main {
     }
 }
 
+#container3d {
+    width: 100%;
+    overflow: hidden;
+}
+
+#container3d canvas {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 #about-activities {
     display: flex;
     flex-direction: column;
