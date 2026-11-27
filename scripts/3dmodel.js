@@ -141,6 +141,7 @@ function animate() {
 window.addEventListener("resize", function () {
   camera.aspect = Math.min(section.clientWidth, 600) / Math.min(section.clientWidth/1.75, 343);
   camera.updateProjectionMatrix();
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setSize(Math.min(section.clientWidth, 600), Math.min(section.clientWidth/1.75, 343));
 });
 
