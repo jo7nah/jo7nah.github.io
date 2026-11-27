@@ -11,8 +11,8 @@ const camera = new THREE.PerspectiveCamera(15, Math.min(section.clientWidth, 600
 
 
 //Keep track of the mouse position, so we can make the eye move
-let mouseX = window.innerWidth / 2;
-let mouseY = window.innerHeight / 2;
+let pointerX = window.innerWidth / 2;
+let pointerY = window.innerHeight / 2;
 
 //Keep the 3D object on a global variable so we can access it later
 let object;
@@ -125,8 +125,8 @@ function animate() {
 
   if (objToRender === "mii" && object) {
     // Calculate where the head wants to look
-    const targetY = -0.5 + (mouseX / window.innerWidth) * 1;
-    const targetX = -0.5 + (mouseY / window.innerHeight) * 1;
+    const targetY = -0.5 + (pointerX / window.innerWidth) * 1;
+    const targetX = -0.5 + (pointerY / window.innerHeight) * 1;
 
     // Smoothly glide toward the target (lower 0.05 for heavier/slower, raise to 0.15 for snappier)
     object.rotation.y = THREE.MathUtils.lerp(object.rotation.y, targetY, 0.05);
@@ -146,9 +146,9 @@ window.addEventListener("resize", function () {
 });
 
 //add mouse position listener, so we can make the head move
-document.onmousemove = (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
+document.onpointermove = (e) => {
+  pointerX = e.clientX;
+  pointerY = e.clientY;
 }
 
 //Start the 3D rendering
