@@ -99,6 +99,7 @@ loader.load(
 
 //Instantiate a new renderer and set its size
 const renderer = new THREE.WebGLRenderer({ alpha: true }); //Alpha: true allows for the transparent background
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.outputEncoding = THREE.sRGBEncoding; // Fixes washed-out/dark glTF colors in r129
 renderer.setSize(Math.min(section.clientWidth, 600), Math.min(section.clientWidth/1.75, 343));
 
